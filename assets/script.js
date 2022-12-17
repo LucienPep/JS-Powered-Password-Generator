@@ -14,14 +14,14 @@ function startPassword(){
 	var special = null
 	var finish = null
 
-	var length = parseInt(character)
-	if (length < 8 || length > 128) {
+	var lengtht = parseInt(character)
+	if (lengtht < 8 || lengtht > 128) {
 		alert("Invalid Selection\nPlease Try Again")
 	} else {
 		casel = prompt("Include Lowercase?\nYes or No")
 	}
 
-	console.log(length)
+	console.log(lengtht)
 
 	//Lowercase
 
@@ -88,38 +88,40 @@ function startPassword(){
 	}else{
 		alert("Invalid Selection\nPlease Try Again")
 	}
-
-	if (lowercase == false && uppercase == false && numeric == false && special == false){
-		alert("Invalid\nYou Must Selected 'Yes' For At least One Parameter\nPlease Try Again")
-	}
 		
 	console.log(special)
 	
-	function passwordgen(length) {
-		let passwordtype = null;
-		if (lowercase == true) passwordtype += "abcdefghijklmnopqrstuvwxyz";
-		if (uppercase == true) passwordtype += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		if (numeric == true) passwordtype += "0123456789";
-		if (special == true) passwordtype += "!@#$%^&*()";
-		
-		for ( let i = 0; i < length; i++ ) {
-			passwordtype += lowercase.charAT(Math.floor(Math.random()*lowercase.length))
+	//Random Password generation 
+
+	function passwordgen() {
+		var passwordtype = "";
+		if (lowercase == true) { passwordtype += "abcdefghijklmnopqrstuvwxyz";
 		}
+		if (uppercase == true) { passwordtype += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		}
+		if (numeric == true) { passwordtype += "0123456789";
+		}
+		if (special == true) { passwordtype += "!@#$%^&*()";
+		}
+
+	let passwordfinal = "";
+	
+	for (let i = 0; i < lengtht; i++) {
+	  const passran = Math.floor(Math.random() * passwordtype.length);
+	  passwordfinal += passwordtype[passran];
+	}
+	
+	console.log(passwordfinal);
 	}
 
-	passwordgen()
+	//Final Output
+
+	if (lowercase == false && uppercase == false && numeric == false && special == false){
+		alert("Invalid\nYou Must Selected 'Yes' For At least One Parameter\nPlease Try Again")
+	}else{
+		passwordgen()
+	}
 }
-
-
-
-// Write password to the #password input
-function writePassword() {
-	var password = generatePassword();
-	var passwordText = document.querySelector("#password");
-
-	passwordText.value = password;
-}
-
 
 // Add event listener to generate button
 
