@@ -2,7 +2,9 @@
 var generateBtn = document.querySelector("#generate");
 
 function startPassword(){
+
 	//Character Length
+	
 	let character = prompt("Please Enter Password Length\nMinimum = 8 Maximum = 128")
 	var casel = null
 	var lowercase = null
@@ -112,6 +114,11 @@ function startPassword(){
 	}
 	
 	console.log(passwordfinal);
+
+	var passwordText = document.querySelector("#password");
+
+	passwordText.value = passwordfinal;
+
 	}
 
 	//Final Output
@@ -125,8 +132,7 @@ function startPassword(){
 
 // Add event listener to generate button
 
-
-document.addEventListener("click", startPassword);
+generateBtn.addEventListener("click", startPassword);
 
 
 
