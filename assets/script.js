@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 function startPassword(){
 
 	//Character Length
-	
+
 	let character = prompt("Please Enter Password Length\nMinimum = 8 Maximum = 128")
 	var casel = null
 	var lowercase = null
@@ -97,14 +97,10 @@ function startPassword(){
 
 	function passwordgen() {
 		var passwordtype = "";
-		if (lowercase == true) { passwordtype += "abcdefghijklmnopqrstuvwxyz";
-		}
-		if (uppercase == true) { passwordtype += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		}
-		if (numeric == true) { passwordtype += "0123456789";
-		}
-		if (special == true) { passwordtype += "!@#$%^&*()";
-		}
+		if (lowercase) passwordtype += "abcdefghijklmnopqrstuvwxyz";
+		if (uppercase) passwordtype += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		if (numeric) passwordtype += "0123456789";
+		if (special) passwordtype += "!@#$%^&*()";
 
 	let passwordfinal = "";
 	
