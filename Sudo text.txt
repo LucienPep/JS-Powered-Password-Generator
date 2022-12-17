@@ -1,0 +1,9 @@
+SUDO For JS-Powered-Password-Generator
+
+When 'Generate Password' box is clicked promt opens asking to select length of password
+when okay is clicked number is recorded and it promt then asks If I would like lowercase charaters, 
+I will present a yes and no button and asnwer will be recorded, do this for other varaints.
+after all prompts are answered one last prompt will say 'Generate Password' with the button Generate
+If no prompt is are selected, new promt will appear saying atleast one much be slected
+the button will read okay and take you back to lowercase prompt.
+once once all prompts are noted a password will be randomly generated and output to id = "password"
