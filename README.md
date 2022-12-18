@@ -1,5 +1,5 @@
 # Homework Week 3
-## JS-Powered-Password-Genrator
+## JS-Powered-Password-Generator
 
 ### User Story
 ```
@@ -27,9 +27,11 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 ### Work Description
+I started by writing out sudo code on a blank notepad document to help me understand the path I wanted to take to complete the task. After looking into JS prompt parameters I started to write the JS code to make the application useable.
 
-ADDD
+With the use of if, else if and else statements I was able to create a work path that asked the user for the password parameters and logged the data. After a lot of reading into Math functions and looking at 'random generation properties' found within JS, I was able to create a working random character generator that would use the desired inputs. Along the way I added in warnings if the inputs were invalid or not completed.
 
+With minimal de-bugging I was able to create a fully functioning password generator that achieves all acceptance criteria required.
 
 >## [**Link to live GitPage**](https://lucienpep.github.io/JS-Powered-Password-Genrator/)
 

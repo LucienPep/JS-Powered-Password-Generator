@@ -14,7 +14,6 @@ function startPassword(){
 	var numeric = null
 	var spec = null
 	var special = null
-	var finish = null
 
 	var lengtht = parseInt(character)
 	if (lengtht < 8 || lengtht > 128) {
